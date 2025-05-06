@@ -110,6 +110,7 @@ nav.navbar ul li a:focus {
     transition:.3s;
     font-size: 18px;
     opacity: 0.8;
+    animation: moveBtn 1s infinite 3s;
 }
 
 .home_content .contact_btn button:hover {
@@ -121,14 +122,26 @@ nav.navbar ul li a:focus {
     filter: drop-shadow(0 0 15px #000);
 }
 
+@keyframes moveBtn {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.04;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
 
 /* =========== About Section =========== */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12% 10%;
-    gap: 10rem;
+    padding: 12% 12%;
+    gap: 13rem;
     background-color: #000;
 }
 
@@ -166,19 +179,21 @@ nav.navbar ul li a:focus {
     background: rgb(241, 241, 241);
 }
 
-
 .projects .Heading_title {
     text-align: center;
     font-size: 60px;
     color: #0000005e;
-    position: relative;
-    top: -50px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .projects_cards {
     display: flex;
     gap: 4rem;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .projects_cards .Project_card {
@@ -234,6 +249,7 @@ nav.navbar ul li a:focus {
 
 .bxl-github {
     font-size: 25px;
+    cursor: pointer;
 }
 
 
